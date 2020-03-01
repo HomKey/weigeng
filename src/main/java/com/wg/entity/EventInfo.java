@@ -93,6 +93,9 @@ public class EventInfo extends BaseEntity{
      */
     private Integer fireAlarm;
 
+    public EventInfo() {
+    }
+
     public EventInfo(WgDataDto dto) {
         this.type = dto.getType();
         this.deviceNumber = dto.getDeviceNumber();
