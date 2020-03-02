@@ -71,7 +71,11 @@ public class UdpServer {
                             }
                         }
                         buf.clear();
-                        responseHandle.handle(result);
+                        try {
+                            responseHandle.handle(result);
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
                     }
                 } catch (IOException e) {
                     e.printStackTrace();
